@@ -46,7 +46,7 @@ public class ajedrez1 {
                     break;
             }
         } catch (Exception error) {
-            System.out.println("");
+            System.out.print("");
         }
     }
     public static void posicion() {
@@ -268,22 +268,40 @@ public class ajedrez1 {
                     System.out.println("Error el alfil no puede estar en esa posicion.");
                 }
                 else {
-                    for (int i = fila + 1; i < tablero.length; i++) {
-                        System.out.print(tablero[i][(columna + i) - fila] + " ");
+                    System.out.println("Tu posicion actual es: " + tablero[fila][columna]);
+                    System.out.print("El alfil puede moverse a: ");
+                    try {
+                        for (int i = fila + 1; i < tablero.length; i++) {
+                            System.out.print(tablero[i][(columna + i) - fila] + " ");
+                        }
+                    } catch (Exception error2) {
+                        System.out.print("");
                     }
-                    for (int i = columna - 1; i >= 1; i--) {
-                        System.out.print(tablero[(columna - i) + fila][(i)] + " ");
+                    try {
+                        for (int i = columna - 1; i >= 1; i--) {
+                            System.out.print(tablero[(columna - i) + fila][(i)] + " ");
+                        }
+                    } catch (Exception error2) {
+                        System.out.print("");
                     }
-                    for (int i = fila - 1; i >= 1; i--) {
-                        System.out.print(tablero[i][(columna - i) + fila] + " ");
+                    try {
+                        for (int i = fila - 1; i >= 1; i--) {
+                            System.out.print(tablero[i][(columna - i) + fila] + " ");
+                        }
+                    } catch (Exception error2) {
+                        System.out.print("");
                     }
-                    for (int i = columna-1; i >= 1; i--) {
-                        System.out.print(tablero[(fila + i) - columna][i] + " ");
+                    try {
+                        for (int i = columna - 1; i >= 1; i--) {
+                            System.out.print(tablero[(fila + i) - columna][i] + " ");
+                        }
+                    } catch (Exception error2) {
+                        System.out.print("");
                     }
                     System.out.print('\n');
                     System.out.println("Tu planilla actual es: " + planilla);
                 }
-            } catch (Exception e) {
+            } catch (Exception error2) {
                 System.out.println("Error el alfil no puede estar en esa posicion.");
             }
             System.out.print("¿Quieres volver a mover el alfil? si/no: ");
