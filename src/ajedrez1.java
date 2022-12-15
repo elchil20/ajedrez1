@@ -302,7 +302,6 @@ public class ajedrez1 {
     public static void caballo() {
         char inicial = 'C';
         Scanner caballo = new Scanner(System.in);
-
         do {
             try {
                 posicion();
@@ -322,7 +321,6 @@ public class ajedrez1 {
                     } catch (Exception error) {
                         System.out.print("");
                     }
-
                     try {
                         System.out.print(tablero[fila+1][columna+2] + " ");
                     } catch (Exception error) {
@@ -356,7 +354,7 @@ public class ajedrez1 {
                     System.out.print('\n');
                     System.out.println("Tu planilla actual es: " + planilla);
                 }
-            } catch (Exception g) {
+            } catch (Exception error) {
                 System.out.println("Error el caballo no puede estar en esa posicion.");
             }
             System.out.print("¿Quieres volver a mover el caballo? si/no: ");
