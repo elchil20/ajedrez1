@@ -45,8 +45,8 @@ public class ajedrez1 {
                     columna = 8;
                     break;
             }
-        } catch (Exception error) {
-            System.out.print("");
+        } catch (Exception error1) {
+            System.out.print("Error1");
         }
     }
     public static void posicion() {
@@ -462,17 +462,33 @@ public class ajedrez1 {
                     for (int j = columna - 1; j >= 1; j--) {
                         System.out.print(tablero[fila][j] + " ");
                     }
-                    for (int i = fila + 1; i < tablero.length; i++) {
-                        System.out.print(tablero[i][(columna + i) - fila] + " ");
+                    try {
+                        for (int i = fila + 1; i < tablero.length; i++) {
+                            System.out.print(tablero[i][(columna + i) - fila] + " ");
+                        }
+                    } catch (Exception error3) {
+                        System.out.print("");
                     }
-                    for (int i = columna - 1; i >= 1; i--) {
-                        System.out.print(tablero[(columna - i) + fila][(i)] + " ");
+                    try {
+                        for (int i = columna - 1; i >= 1; i--) {
+                            System.out.print(tablero[(columna - i) + fila][(i)] + " ");
+                        }
+                    } catch (Exception error3) {
+                        System.out.print("");
                     }
-                    for (int i = fila - 1; i >= 1; i--) {
-                        System.out.print(tablero[i][(columna - i) + fila] + " ");
+                    try {
+                        for (int i = fila - 1; i >= 1; i--) {
+                            System.out.print(tablero[i][(columna - i) + fila] + " ");
+                        }
+                    } catch (Exception error3) {
+                        System.out.print("");
                     }
-                    for (int i = columna-1; i >= 1; i--) {
-                        System.out.print(tablero[(fila + i) - columna][i] + " ");
+                    try {
+                        for (int i = columna - 1; i >= 1; i--) {
+                            System.out.print(tablero[(fila + i) - columna][i] + " ");
+                        }
+                    } catch (Exception error3) {
+                        System.out.print("");
                     }
                     System.out.print('\n');
                     System.out.println("Tu planilla actual es: " + planilla);
